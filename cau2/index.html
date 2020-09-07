@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function checknum(num) {
+			let array = [2,3,54,67,68,34,876];
+			let posit = 0;
+			for (let i = 0; i < array.length; i++) {
+				if (num === array[i]) {
+					posit += i;
+					break;
+				}
+			}
+			console.log(posit);
+			if (posit !== 0) {
+				alert("Số " + num + " có trong mảng " + array + "nằm ở vị trí: " + posit);
+			}
+			else{
+				alert("Số " + num + " không có trong mảng " + array);
+			}
+
+		}; 
+		let number = parseInt(prompt("Nhập số cần check: "));
+		checknum(number);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đếm số kí tự nguyên âm</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function checkvowel(chain) {
+			let vowel = ["a", "o", "u", "i", "e"];
+			let count = 0;
+			for (let i = 0; i < chain.length; i ++ ) {
+				for ( let j = 0; j < vowel.length; j ++ ) {
+					if(chain[i].toLowerCase() === vowel[j].toLowerCase()){
+						count += 1;
+					}
+				}
+			}
+			if (count === 0 ) {
+				return false;
+			}
+			return count;
+		}
+		let chaincheck = prompt("Nhập chuỗi");
+		alert(checkvowel(chaincheck));
+	</script>
+</body>
+</html>
